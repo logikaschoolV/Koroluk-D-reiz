@@ -1,0 +1,698 @@
+/* ==========================================================================
+   RESET & GLOBAL STYLES
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #2b1154;
+  background-color: #ffffff;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.brand-text {
+  font-weight: 800;
+  color: #7000ff;
+}
+
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+.btn {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  padding: 10px 24px;
+  border-radius: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn--yellow {
+  background-color: #ffcc00;
+  color: #2b1154;
+}
+
+.btn--yellow:hover {
+  background-color: #ffcc00;
+  transform: translateY(-2px);
+}
+
+.btn--purple {
+  background-color: #7000ff;
+  color: #ffffff;
+}
+
+.btn--purple:hover {
+  background-color: #5c00d6;
+  box-shadow: 0 5px 15px rgba(112, 0, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn--large {
+  padding: 16px 48px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+.header {
+  padding: 20px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.header__brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header__logo .logo-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.header__title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #2b1154;
+}
+
+.header__subtitle {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.nav__list {
+  display: flex;
+  gap: 20px;
+}
+
+.nav__link {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #2b1154;
+  transition: color 0.2s;
+}
+
+.nav__link:hover {
+  color: #7000ff;
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero {
+  /* Шлях до вашого зображення та напівпрозорий темний градієнт для читабельності тексту */
+  background: linear-gradient(rgba(43, 17, 84, 0.4), rgba(43, 17, 84, 0.4)), url('Gemini_Generated_Image_rkhdi5rkhdi5rkhd.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  padding: 80px 0 60px;
+  text-align: center;
+  color: #ffffff; /* Робимо текст білим, щоб він гарно виділявся на фоні */
+}
+
+/* Оновлюємо колір підзаголовка та заголовка у hero-блоці для кращої контрастності */
+.hero__title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.hero__title .brand-text {
+  color: #ffd000; /* Робимо акцентне слово жовтим для яскравості */
+}
+
+.hero__subtitle {
+  font-size: 1.3rem;
+  color: #ffd000; /* Робимо підзаголовок світлим/жовтуватим */
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   CAMPS CARDS SECTION
+   ========================================================================== */
+.camps {
+  padding: 30px 0 60px;
+}
+
+.camps__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.camp-card {
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 240px;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.camp-card--purple { background-color: #3b1b6e; }
+.camp-card--blue { background-color: #2e3d75; }
+.camp-card--yellow { background-color: #ffcc00; }
+
+.camp-card__badge {
+  background-color: #78d626;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+}
+
+.camp-card--yellow .camp-card__badge {
+  background-color: #7000ff;
+}
+
+.camp-card__icon {
+  margin: 10px 0;
+  border-radius: 25px;
+}
+
+.camp-card__footer {
+  background-color: #ffffff;
+  width: 90%;
+  padding: 10px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ==========================================================================
+   SECTION TITLES
+   ========================================================================== */
+.section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+/* ==========================================================================
+   BENEFITS SECTION
+   ========================================================================== */
+.benefits {
+  padding: 40px 0 60px;
+}
+
+.benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.benefit-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.benefit-item__image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.benefit-item__image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.benefit-item__badge {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  background: rgba(147, 51, 234, 0.9);
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  width: 55%;
+  line-height: 1.3;
+  backdrop-filter: blur(4px);
+}
+
+/* ==========================================================================
+   WHY CHOOSE US SECTION
+   ========================================================================== */
+.why-us {
+  padding: 40px 0 80px;
+}
+
+.why-us__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.why-card {
+  padding: 25px;
+  border-radius: 20px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+}
+
+.why-card__icon {
+  font-size: 2rem;
+}
+
+.why-card__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.why-card__text {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+.why-card--yellow {
+  background-color: #ffcc00;
+  color: #2b1154;
+}
+
+.why-card--purple {
+  background-color: #7000ff;
+}
+
+.why-card--green {
+  background-color: #78d626;
+  color: #2b1154;
+}
+
+.why-card--dark-purple {
+  background-color: #3b1b6e;
+}
+
+.why-card--light-green {
+  background-color: #8ce635;
+  color: #2b1154;
+}
+
+.why-card--amber {
+  background-color: #ff9900;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.footer {
+  background-color: #ffcc00;
+  padding: 40px 0;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.footer__logo {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #7000ff;
+}
+
+.footer__nav {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.footer__nav a:hover {
+  color: #7000ff;
+}
+
+.footer__copyright {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 992px) {
+  .why-us__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .header__container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero__title {
+    font-size: 1.7rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+
+  .benefits__grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .why-us__grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ==========================================================================
+   NEW PAGES STYLES (COURSES & ABOUT)
+   ========================================================================== */
+
+/* Active link in nav */
+.nav__link--active {
+  color: #7000ff;
+  border-bottom: 2px solid #7000ff;
+  padding-bottom: 2px;
+}
+
+/* Page Hero */
+.page-hero {
+  background: linear-gradient(135deg, #2b1154 0%, #3b1b6e 100%);
+  padding: 50px 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+.page-hero__title {
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.page-hero__subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Courses Cards */
+.courses-section {
+  padding: 50px 0;
+  background-color: #f9f9fb;
+}
+
+.courses__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.course-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-card__header {
+  padding: 20px;
+  color: #ffffff;
+}
+
+.course-card__header--orange { background-color: #ff9900; }
+.course-card__header--purple { background-color: #7000ff; }
+.course-card__header--blue { background-color: #2e3d75; }
+.course-card__header--green { background-color: #78d626; color: #2b1154; }
+.course-card__header--dark-purple { background-color: #3b1b6e; }
+.course-card__header--yellow { background-color: #ffcc00; color: #2b1154; }
+
+.course-card__age {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.course-card__title {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.course-card__body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.course-card__desc {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.course-card__features {
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+
+.course-card__features li {
+  margin-bottom: 6px;
+}
+
+.course-card__btn {
+  width: 100%;
+}
+
+/* Apply Form Section */
+.apply-section {
+  padding: 50px 0;
+}
+
+.apply-box {
+  background: #f0ebff;
+  border-radius: 25px;
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.apply-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: #7000ff;
+}
+
+.form-submit {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* About Page Sections */
+.about-info {
+  padding: 60px 0;
+}
+
+.about-info__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-info__text h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #2b1154;
+}
+
+.about-info__text p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.about-info__image img {
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Stats Section */
+.stats {
+  background-color: #ffcc00;
+  padding: 40px 0;
+}
+
+.stats__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.stat-card__number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #7000ff;
+}
+
+.stat-card__label {
+  font-weight: 700;
+  color: #2b1154;
+  font-size: 0.95rem;
+}
+
+/* Reviews Section */
+.reviews {
+  padding: 60px 0;
+}
+
+.reviews__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.review-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review-card__text {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.review-card__author strong {
+  display: block;
+  color: #2b1154;
+}
+
+.review-card__author span {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* Responsive tweaks for about page */
+@media (max-width: 768px) {
+  .about-info__grid {
+    grid-template-columns: 1fr;
+  }
+}
